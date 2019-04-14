@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		
 		<title>Test</title>
 	</head>
 	<body>
 		<p>Test</p>
-		
+		<pre id='data'></pre>
 		<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
 		<script>
 		  // Initialize Firebase
@@ -18,6 +19,10 @@
 			    messagingSenderId: "779173332924"
 			  };
 			  firebase.initializeApp(config);
+			   var ref = firebase.database().ref();
+			   ref.on("value", function(snapshot){
+    			   output.innerHTML = JSON.stringify(snapshot.val(), null, 2);
+});
 		</script>
 	</body>
 </html>
