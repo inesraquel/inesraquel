@@ -5,24 +5,6 @@
 		<title>Test</title>
 	</head>
 	<body>
-		<p>Test</p>
-		<pre id='data'></pre>
-		<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
-		<script>
-		  // Initialize Firebase
-			  var config = {
-			    apiKey: "AIzaSyAxXQ2QbUmdT7j7ZA7uo6eI6F3dN-DF6L0",
-			    authDomain: "my-website-57906.firebaseapp.com",
-			    databaseURL: "https://my-website-57906.firebaseio.com",
-			    projectId: "my-website-57906",
-			    storageBucket: "my-website-57906.appspot.com",
-			    messagingSenderId: "779173332924"
-			  };
-			  firebase.initializeApp(config);
-			   var ref = firebase.database().ref();
-			   ref.on("value", function(snapshot){
-    			   output.innerHTML = JSON.stringify(snapshot.val(), null, 2);
-});
-		</script>
+	
 	</body>
 </html>
